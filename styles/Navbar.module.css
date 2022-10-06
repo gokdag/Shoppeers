@@ -1,0 +1,138 @@
+.generalContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-bottom: 1px solid black;
+}
+.navbarLogo{
+    font-size:34px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-weight: bold;
+    cursor: pointer;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* .navbarContainer{}
+.navbarList{} */
+.navbarItem{
+    list-style-type: none;
+}
+.navbarLink{
+    margin-right: 20px;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+}
+.navbarLink::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.25s ease-out;
+}
+
+.navbarLink:hover::before{
+    width: 100%;
+}
+/* .navbarSocial{} */
+.navbarSocialList{
+    display: flex;
+    flex-direction: row;
+}
+/* .navbarSocialItem{} */
+.navbarSocialLink{
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+}
+.modal{
+    position: fixed;
+    background-color:#fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: 999;
+    padding: 20px 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+    
+   
+}
+.activeModal{
+   opacity: 1;
+   pointer-events: all;
+   transition: .3s;
+   overflow-y:auto; 
+}
+.popup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.popupTitle{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+.popupSearch{
+    outline: 0;
+    border: 0;
+    padding: 20px 47px;
+    width: 500px;
+    border-radius: 50px;
+    font-size: 18px;
+    background-color: #f5f5f5;
+    color: #545454;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+.cancel{
+    color: #333;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f5f5f5
+}
+
+ @media only screen and (hover:none) and (pointer: coarse) {
+
+    .wrapper{
+        display: none;
+    }
+    .navbarSocial{
+        display: none;
+    }
+    .generalContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .navbarLogo{
+        font-size: 22px;
+    }
+
+} 

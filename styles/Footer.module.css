@@ -1,0 +1,121 @@
+.container{}
+.list{}  
+.item{
+    list-style-type: none;
+}
+.title{
+    font-size: 26px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+    margin-right: 20px;
+    transition: .3s ease-in-out;
+}
+.title:hover{
+    text-decoration: underline;
+}
+.wrapper{
+    min-height: 300px;
+    padding-top: 30px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-top: 1px solid black;
+}
+.infoItems{
+    list-style-type: none;
+}
+.link{
+    cursor: pointer;
+    font-size: 16px;
+    margin: 12px 0 10px 0;
+    color: #666;
+    transition: .3s ease-in-out;
+}
+.link:hover{
+    color: #000;
+    margin-left: 5px;
+}
+.bottomWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bottomList{
+    display: flex;
+    list-style-type: none;
+}
+.bottomItems{
+    margin-right: 20px;
+}
+.bottomContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.bottomContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.bottomLogo{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.bottomRightWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+@media only screen and (hover:none) and (pointer: coarse) {
+
+    .wrapper{
+     
+        padding: 30px 40px;
+        flex-direction: column;
+        justify-content: space-between; 
+        border: none;
+    }
+    .title{
+        font-size: 14px;
+    }
+    .link{
+        font-size:12px;
+    }
+    .list{
+        margin-bottom: 10px;
+    }
+    .bottomContainer{
+        border-bottom:none;
+        margin-bottom: 0px;
+    }
+    .bottomLogo{
+        font-size: 12px;
+        margin-right: 10px;
+
+    }
+    .bottomRightWrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* max-width: 50px; */
+    }
+    .bottomWrapper{}
+    .bottomItems{
+        margin-right: 20px;
+       
+    }
+} 
