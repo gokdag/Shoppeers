@@ -13,6 +13,7 @@ import {useEffect} from "react";
 import {Navigation} from "swiper";
 import {useSelector, useDispatch} from "react-redux";
 import {addFavorite, removeFavorite} from '../../redux/favorite/favoriteSlice'
+import {useGetCategoryByIdQuery} from "../../redux/services/categoryApi";
 
 const DATA = {
     moduleItems: {
@@ -67,6 +68,8 @@ const Module001 = () => {
         console.log("countcount", count)
     }, [count]);
 
+    const { data, error, isLoading } = useGetCategoryByIdQuery("hello")
+    console.log("dataTest",data)
     function addorRemoveFavorite(productId) {
 
         const checkProductId = count.data.find(x => x == productId)
@@ -111,4 +114,4 @@ const Module001 = () => {
     );
 };
 
-export default  Module001 ;
+export default Module001;

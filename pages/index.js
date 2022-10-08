@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 import Module001 from "../components/Module-001";
 import Module002 from "../components/Module-002";
-import CategoryId from "./[categoryId]";
+
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <Layout>
         <Module001 />
-        {/* <Module002 /> */}
+        <Module002 />
       </Layout>
     </>
   );
