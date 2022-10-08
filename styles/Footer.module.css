@@ -1,5 +1,5 @@
-.container{}
-.list{}  
+/* .container{}
+.list{}   */
 .item{
     list-style-type: none;
 }
@@ -80,14 +80,14 @@
 }
 
 
-@media only screen and (hover:none) and (pointer: coarse) {
+@media only screen and (hover:none) and (pointer: coarse){
 
     .wrapper{
-     
         padding: 30px 40px;
         flex-direction: column;
         justify-content: space-between; 
-        border: none;
+        border:none;
+        margin-top: 0px;
     }
     .title{
         font-size: 14px;
@@ -113,7 +113,6 @@
         align-items: center;
         /* max-width: 50px; */
     }
-    .bottomWrapper{}
     .bottomItems{
         margin-right: 20px;
        

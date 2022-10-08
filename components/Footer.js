@@ -288,7 +288,7 @@ const Footer = () => {
     <>
       <div className={styles.wrapper}>
         {DATA.topArea.allItems.map((x, index) => (
-          <FooterItem key={index} title={x.title} items={x.items}  />
+          <FooterItem key={index} title={x.title} items={x.items} />
         ))}
       </div>
 

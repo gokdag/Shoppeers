@@ -116,7 +116,7 @@
     background-color: #f5f5f5
 }
 
- @media only screen and (hover:none) and (pointer: coarse) {
+ @media only screen and (hover:none) and (pointer: coarse)  {
 
     .wrapper{
         display: none;

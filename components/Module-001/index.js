@@ -50,8 +50,8 @@ const DATA = {
                 price: "659.00 TL",
             },
             {
-                url: "https://farktorcdn.com/Library/Upl/5500156/Product/K23EL069KAH-1.jpg",
-                text: "Beli Lastikli Desenli Elbise",
+                url: "https://farktorcdn.com/Library/Upl/5500156/Product/Y22EL513SYH-1.jpg",
+                text: "Kısa Kol Kuşaklı Elbise",
                 marketPrice: "769,00 TL",
                 price: "499.00 TL",
             },
@@ -59,7 +59,7 @@ const DATA = {
     },
 };
 
-const index = () => {
+const Module001 = () => {
     const count = useSelector((state) => state.favorite)
     const dispatch = useDispatch()
     useEffect(() => {
@@ -111,4 +111,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default  Module001 ;
