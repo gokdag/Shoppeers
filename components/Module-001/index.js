@@ -65,21 +65,19 @@ const Module001 = () => {
     const dispatch = useDispatch()
     useEffect(() => {
 
-        console.log("countcount", count)
     }, [count]);
 
     const { data, error, isLoading } = useGetCategoryByIdQuery("hello")
-    console.log("dataTest",data)
     function addorRemoveFavorite(productId) {
 
         const checkProductId = count.data.find(x => x == productId)
-        console.log("checkProductIdcheckProductId", checkProductId)
+       
         if (checkProductId || checkProductId == 0) {
-            console.log("burada")
+           
             dispatch(removeFavorite(productId))
             return
         }
-        console.log("burada2")
+       
         dispatch(addFavorite(productId))
     }
 

@@ -6,7 +6,6 @@ import Layout from "../components/Layout";
 import Module001 from "../components/Module-001";
 import Module002 from "../components/Module-002";
 
-
 export default function Home() {
   return (
     <>
@@ -14,8 +13,8 @@ export default function Home() {
         <title>ShopPeers</title>
       </Head>
       <Layout>
-        <Module001 />
         <Module002 />
+        <Module001 />
       </Layout>
     </>
   );
