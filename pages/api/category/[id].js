@@ -196,8 +196,3 @@ export default function handler(req, res) {
    
    }
  
-
-
-
-
-// categoryId si itemin category id sine eşit olanları dön categoryId ye sahip olan infoları dönmek için objeleri kullan.

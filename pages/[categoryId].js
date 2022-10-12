@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import styles from "../styles/categoryId.module.css";
+import styles from "../styles/categoryId.module.css"
 
 
 
@@ -41,7 +41,7 @@ const categoryId = ({lists}) => {
 };
 
 
-//
+
 
 export async function getServerSideProps(context) {
   console.log(context.query)

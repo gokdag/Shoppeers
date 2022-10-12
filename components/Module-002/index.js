@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./module002.module.css";
 
 
@@ -43,7 +43,7 @@ const Module002 = () => {
       <div className={styles.module002}>
         <div className={styles.module002List}>
           {DATA.moduleItems.items.map((x, index) => (
-            <Link  href={x.categoryId.toString()}  key={index}>
+            <Link href={x.categoryId.toString()}  key={index}>
               <a className={styles.module002Item}>
                 <div className={styles.module002ImageBox}>
                   <img className={styles.module002Image} src={x.url} />
