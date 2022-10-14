@@ -10,15 +10,15 @@ const bannerCategoryId = ({ bannerLists }) => {
   return (
     <>
       <div className={styles.bannerCategoryContainer}>
-        <div className={styles.bannerTopTitle}>
+        {/* <div className={styles.bannerTopTitle}>
           <div className={styles.bannerTitle}>{bannerLists.bannerCategoryInfo[0].title}</div>
           <div className={styles.bannerTitleText}>
             {bannerLists.bannerCategoryInfo[0].titleText}
           </div>
-        </div>
+        </div> */}
         <div className={styles.bannerCategoryList}>
           {bannerLists.items.map((x) => (
-            <Link href="/">
+            <Link href={`/detail/${x.productId}`}>
               <a className={styles.bannerCategoryItem}>
                 <div className={styles.categoryImgItem}>
                   <img src={x.url} />
@@ -42,7 +42,6 @@ const bannerCategoryId = ({ bannerLists }) => {
 };
 
 export async function getServerSideProps(context) {
-  console.log(context.query);
   const request = await fetch(
     `http://localhost:3000/api/bannerCategory/${context.query.bannerCategoryId}`
   );

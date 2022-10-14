@@ -1,0 +1,68 @@
+
+.bannerImg{
+    position: relative;
+}
+.bannerInfo{
+    position: absolute;
+    top: 28%;
+    left: 41%;
+}
+.bannerText{
+    font-size: 48px;
+    line-height: 45px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+  
+}
+.btnShortText{
+   position: absolute;
+   top: 85%;
+   left: 47%;
+   border: 0;
+   outline: 0;
+   padding: 10px;
+   color: black;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   border-radius: 3px;
+   cursor: pointer;
+   transition: .3s ease-in-out;
+}
+.btnShortText:hover{
+    background-color: black;
+    color: white;
+}
+
+
+@media only screen and (hover:none) and (pointer: coarse) {
+    
+    .bannerText{
+        font-size: 25px;
+    }
+    .btnShortText{
+       position: absolute;
+       top: 85%;
+       left: 47%;
+       border: 0;
+       outline: 0;
+       padding: 10px;
+       color: black;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       border-radius: 3px;
+       cursor: pointer;
+       transition: .3s ease-in-out;
+    }
+    .bannerInfo{
+        position: absolute;
+        top: 30%;
+        left: 38%;
+    }
+    .bannerText{
+        font-size: 20px;
+    }
+    .btnShortText{
+       top: 70%;
+       left: 40%;
+    }
+   
+} 

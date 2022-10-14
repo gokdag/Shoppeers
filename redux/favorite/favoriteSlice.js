@@ -8,7 +8,7 @@ const initialState = {
 
 export const favoriteSlice = createSlice({
     name: 'favorite',
-    initialState,
+    initialState, // value 
     reducers: {
         addFavorite: (state, action) => {
             if (!state.data.some(product => product == action.payload)) {

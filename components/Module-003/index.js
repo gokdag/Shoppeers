@@ -14,7 +14,7 @@ const DATA = {
         shortText: "",
         marketPrice: "",
         price: "",
-        categoryId: 4,
+        categoryId: 10,
       },
       {
         url: "https://farktorcdn.com/Library/Upl/5500156/All/Fr-55001561392022174007_akseusuar.jpg?V=11102022183944",
@@ -22,7 +22,7 @@ const DATA = {
         shortText: "",
         marketPrice: "",
         price: "",
-        categoryId: 5,
+        categoryId: 11,
       },
       {
         url: "https://farktorcdn.com/Library/Upl/5500156/All/Fr-55001561392022180953_trenccc..jpg?V=11102022183944",
@@ -30,7 +30,7 @@ const DATA = {
         shortText: "",
         marketPrice: "",
         price: "",
-        categoryId: 6,
+        categoryId: 12,
       },
     ],
   },

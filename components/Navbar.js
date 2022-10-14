@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, {useState } from "react";
 import styles from "../styles/Navbar.module.css";
 
@@ -150,7 +151,9 @@ const Navbar = () => {
             <a className={styles.navbarSocialLink}>ÜYE GİRİŞİ</a>
           </li>
           <li className={styles.navbarSocialItem}>
+            <Link href="/favorite">  
             <a className={styles.navbarSocialLink}>FAVORİLERİM</a>
+            </Link>
           </li>
           <li className={styles.navbarSocialItem}>
             <a className={styles.navbarSocialLink}>SEPETİM</a>

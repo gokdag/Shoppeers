@@ -23,38 +23,56 @@ const DATA = {
             {
                 url: "https://farktorcdn.com/Library/Upl/5500156/Product/K23EL084TAS-1.jpg",
                 text: "Kısa Kol Midi Boy Elbise",
+                shortText: "",
                 marketPrice: "899,00 TL",
                 price: "619.00 TL",
+                categoryId: "3",
+                productId: 1
             },
             {
                 url: "https://farktorcdn.com/Library/Upl/5500156/Product/K23EL019KAH-1.jpg",
                 text: "Dik Yaka Elbise",
+                shortText: "",
                 marketPrice: "769,00 TL",
                 price: "599.00 TL",
+                categoryId: "3",
+                productId: 2
             },
             {
                 url: "https://farktorcdn.com/Library/Upl/5500156/Product/K23EL095SYH-4.jpg",
                 text: "Desenli Midi Boy Elbise",
+                shortText: "",
                 marketPrice: "1199,00 TL",
                 price: "749.00 TL",
+                categoryId: "3",
+                productId: 3
             },
             {
                 url: "https://farktorcdn.com/Library/Upl/5500156/Product/K23EL010KAH-1.jpg",
                 text: "Biyeli Kolsuz Elbise",
+                shortText: "",
                 marketPrice: "799,00 TL",
                 price: "599.00 TL",
+                categoryId: "3",
+                productId: 4
             },
             {
                 url: "https://farktorcdn.com/Library/Upl/5500156/Product/K23EL069KAH-1.jpg",
                 text: "Beli Lastikli Desenli Elbise",
+                shortText: "",
                 marketPrice: "890,00 TL",
                 price: "659.00 TL",
+                categoryId: "3",
+                productId: 5
             },
             {
                 url: "https://farktorcdn.com/Library/Upl/5500156/Product/Y22EL513SYH-1.jpg",
                 text: "Kısa Kol Kuşaklı Elbise",
+                shortText: "",
                 marketPrice: "769,00 TL",
                 price: "499.00 TL",
+                categoryId: "3",
+                productId: 6
             },
         ],
     },
