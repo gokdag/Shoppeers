@@ -1,7 +1,7 @@
 import styles from "../../styles/details.module.css";
 import { useRouter } from "next/router"; // => adres çubuğundan gelen değişkenlere ulaşabileceğiz,
 
-const details = ({ detailList }) => {
+const Details = ({ detailList }) => {
   // console.log("detailList : 55555");
   const router = useRouter();
   const { details } = router.query;
@@ -38,4 +38,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default details;
+export default Details;

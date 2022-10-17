@@ -148,7 +148,14 @@ const Navbar = () => {
           </div>
           {/* MODAL AREA END */}
           <li className={styles.navbarSocialItem}>
+            <Link href="/signup"> 
+            <a className={styles.navbarSocialLink}>ÜYE OL</a>
+            </Link>
+          </li>
+          <li className={styles.navbarSocialItem}>
+            <Link href="/login"> 
             <a className={styles.navbarSocialLink}>ÜYE GİRİŞİ</a>
+            </Link>
           </li>
           <li className={styles.navbarSocialItem}>
             <Link href="/favorite">  

@@ -4,7 +4,7 @@ import { categoryApi } from '../../redux/services/categoryApi'
 import { useGetProductQuery } from '../../redux/services/productApi'
 
 
-const favorite = () => {
+const Favorite = () => {
     const favoriteArea = useSelector((state) => state.favorite.data)
     console.log("favoriteArea", favoriteArea)
 
@@ -17,4 +17,4 @@ const favorite = () => {
   )
 }
 
-export default favorite
+export default Favorite

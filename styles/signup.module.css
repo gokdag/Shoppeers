@@ -1,0 +1,92 @@
+.formContainer{
+    padding: 0 30px;
+    padding-top: 215px;
+    padding-bottom: 16px;
+}
+.signUp{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+.form{
+    max-width: 450px;
+    width: 100%;
+}
+.title{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: start;
+    text-transform: uppercase;
+}
+.inputs{
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #6c6c6c;
+    font-size: 16px;
+    padding: 10px 3px;
+    line-height: 24px;
+    width: 100%;
+    transition: .3s;
+    color: #000;
+    font-family: inherit;
+    font-weight: 100;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.btn{
+    margin-top: 30px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    height: auto;
+    padding: 12px 20px;
+    background-color: #000;
+    border: 0;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+ .errors{
+    color: red;
+    margin: 0px 0 2px 0 ;
+} 
+.cancel{
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+    height: 30px;
+}
+
+
+@media only screen and (hover:none) and (pointer: coarse){
+    .formContainer{
+        padding-top: 200px;
+        padding-bottom: 0px;
+    }
+    .signUp{
+        margin: 0 5%;
+    }
+    .form{
+        max-width: 450px;
+        width: 100%;
+    }
+    .title{
+        font-size: 22px;
+    }
+    .inputs{
+        margin-bottom: 15px;
+    }
+     .errors{
+        margin: 0px 0 2px 0 ;
+    } 
+    .cancel{
+        font-size: 20px;
+        height: 20px;
+    }
+    
+    
+} 

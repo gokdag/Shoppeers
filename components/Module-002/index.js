@@ -42,7 +42,7 @@ const Module002 = () => {
       <div className={styles.module002}>
         <div className={styles.module002List}>
           {DATA.moduleItems.items.map((x, index) => (
-            <Link href={x.categoryId.toString()}  key={index}>
+            <Link href={ `category/${x.categoryId.toString()}`}  key={index}>
               <a className={styles.module002Item}>
                 <div className={styles.module002ImageBox}>
                   <img className={styles.module002Image} src={x.url} />

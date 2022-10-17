@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../../styles/bannerCategoryId.module.css";
 
-const bannerCategoryId = ({ bannerLists }) => {
+const BannerCategoryId = ({ bannerLists }) => {
   console.log(bannerLists)
   const router = useRouter();
   const { bannerCategoryId } = router.query;
@@ -17,8 +17,8 @@ const bannerCategoryId = ({ bannerLists }) => {
           </div>
         </div> */}
         <div className={styles.bannerCategoryList}>
-          {bannerLists.items.map((x) => (
-            <Link href={`/detail/${x.productId}`}>
+          {bannerLists.items.map((x, index) => (
+            <Link key={index} href={`/detail/${x.productId}`}>
               <a className={styles.bannerCategoryItem}>
                 <div className={styles.categoryImgItem}>
                   <img src={x.url} />
@@ -54,4 +54,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default bannerCategoryId;
+export default BannerCategoryId;

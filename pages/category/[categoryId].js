@@ -5,7 +5,7 @@ import styles from "../styles/categoryId.module.css"
 
 
 
-const categoryId = ({lists}) => {
+const CategoryId = ({lists}) => {
   const router = useRouter();
   const { categoryId } = router.query;
   return (
@@ -16,8 +16,8 @@ const categoryId = ({lists}) => {
                   <div className={styles.titleText}>{lists.categoryInfo[0].titleText}</div>
                 </div>
         <div className={styles.categoryList}>
-          {lists.items.map((x) => (
-            <Link href="/">
+          {lists.items.map((x, index) => (
+            <Link key={index} href="/">
               <a className={styles.categoryItem}>
                 <div className={styles.categoryImgItem}>
                   <img src={x.url} />
@@ -64,6 +64,6 @@ export async function getServerSideProps(context) {
 
 
 
-export default categoryId;
+export default CategoryId;
 
 

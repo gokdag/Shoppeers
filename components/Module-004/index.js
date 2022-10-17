@@ -71,7 +71,7 @@ const Module004 = ({isMobile}) => {
       className="bannerSwiper"
     >
       {DATA.banner.items.map((x, index) => (
-        <SwiperSlide className={styles.bannerSlide}>
+        <SwiperSlide key={index} className={styles.bannerSlide}>
           <a className={styles.module004Banner}>
             <div className={styles.bannerSliderImg}>
               <img src={(isMobile)? x.mobileUrl : x.url } className={styles.bannerImg} />

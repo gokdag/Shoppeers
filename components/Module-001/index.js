@@ -111,7 +111,7 @@ const Module001 = () => {
                     className="mySwiper"
                 >
                     {DATA.moduleItems.items.map((x, index) => (
-                        <SwiperSlide className={styles.swiperSlide}>
+                        <SwiperSlide key={index} className={styles.swiperSlide}>
                             <div className={styles.modalSlider}>
                                 <button className={styles.favorite} onClick={() => addorRemoveFavorite(index)}>Favori
                                 </button>
