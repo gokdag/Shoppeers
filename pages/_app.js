@@ -6,12 +6,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import Navbar from "../components/Navbar";
+
 
 
 function MyApp({ Component, pageProps }) {
   return (
       <Provider store={store}>
+         <Navbar />   
         <Component {...pageProps} />
+      
       </Provider>
   )
 }

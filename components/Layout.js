@@ -18,7 +18,6 @@ const Layout = ({ children }) => {
     
   return (
     <div>
-      <Navbar />
       <div style={{minHeight: "calc(100vh - 98px)"}}>{children}</div>
       <Footer />
     </div>

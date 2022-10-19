@@ -2,6 +2,22 @@
     padding: 20px 50px;
     width: 100%;
 }
+.view{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.two{
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.three{
+    font-size: 24px;
+    cursor: pointer;
+}
 .bannerTopTitle{
     display: flex;
     flex-direction: column;
@@ -34,8 +50,57 @@
     width: 100%;
     gap: 0px 2px;
 }
-.bannerCategoryItem{
+.bannerCategoryList.double .bannerCategoryItem{
+    width: calc(50% - 2px);
+}
+.bannerCategoryList.triple .bannerCategoryItem{
     width: calc(33% - 4px);
+}
+/* .bannerCategoryItem{
+    width: calc(33% - 4px);
+}  */
+.categoryImgItem{
+    position: relative;
+}
+.categoryImgItem:hover .sizes{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -100%);
+    transition:.3s cubic-bezier(.17,.67,.83,.67);
+    
+}
+.sizes{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    background-color: #f9f7f6e6;
+    padding: 10px 20px;
+    visibility: hidden;
+    transition: .4s ease-in-out;
+    overflow: hidden;
+    opacity: 0;
+}
+.sizesTitle{
+    padding-bottom: 15px;
+    text-align: center;
+    color: #515151;
+}
+.sizesItems{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+.productSize{
+    color: #515151;
+    padding: 10px;
+    border: 1px solid #f9f7f6e6;
+    margin-right: 5px;
+}
+.productSize:hover{
+   border: 1px solid #000;
 }
 .bannerCategoryInfo{
     margin-top: 12px;
@@ -63,6 +128,20 @@
     font-size: 16px;
     margin-top: 3px;
     margin-bottom: 40px;
+}
+.double{
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.double{
+    cursor: pointer;
+    font-size: 25px;
+}
+.triple{
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 
@@ -126,6 +205,7 @@
         margin-top: 3px;
         margin-bottom: 40px;
     }
-    
-
+    .categoryImgItem:hover .sizes{
+        visibility: hidden;
+    }
 } 
