@@ -24,10 +24,10 @@
     white-space: nowrap;
 }
 .tabsTitle:hover{
-    margin-left: 10px;
+    margin-left: 0px;
 }
-.tabContent{} 
-.TabsMenu{}
+/* .tabContent{} 
+.TabsMenu{} */
 .tabContentWrapper{
     padding: 70px;
     margin-bottom: 60px;

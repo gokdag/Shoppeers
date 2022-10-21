@@ -41,9 +41,10 @@ const TabsMenu = () => {
    }
   }, [tab]);
   useEffect(() => {
-    if(q) {
-      clickedTab(q);
-    }
+    let active = q? q : 1
+    if(active) {
+      clickedTab(active);
+    } 
   }, [q]);
 
   const clickedTab = (item) => {

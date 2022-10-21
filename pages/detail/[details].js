@@ -31,6 +31,7 @@ export async function getServerSideProps(context) {
     `http://localhost:3000/api/details/${context.query.details}`
   );
   const detailList = await request.json();
+  console.log(detailList)
   return {
     props: {
       detailList,

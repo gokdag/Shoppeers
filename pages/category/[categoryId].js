@@ -11,13 +11,13 @@ const CategoryId = ({lists}) => {
   return (
     <>
       <div className={styles.categoryContainer}>
-      <div className={styles.topTitle}>
+      {/* <div className={styles.topTitle}>
                   <div className={styles.title}>{lists.categoryInfo[0].title}</div>
                   <div className={styles.titleText}>{lists.categoryInfo[0].titleText}</div>
-                </div>
+                </div> */}
         <div className={styles.categoryList}>
           {lists.items.map((x, index) => (
-            <Link key={index} href="/">
+            <Link key={index} href={`/detail/${x.productId}`}>
               <a className={styles.categoryItem}>
                 <div className={styles.categoryImgItem}>
                   <img src={x.url} />
@@ -50,11 +50,11 @@ export async function getServerSideProps(context) {
   const lists = await request.json();
   // console.log(Object.keys(lists))
 
-  if (!lists?.categoryInfo[0]) {
-    return {
-        notFound: true
-    };
-}
+//   if (!lists?.categoryInfo[0]) {
+//     return {
+//         notFound: true
+//     };
+// }
   return {
     props: {
       lists, // will be passed to the page component as props

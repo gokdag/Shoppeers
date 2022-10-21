@@ -1,133 +1,135 @@
 .categoryContainer{
-  padding: 20px 50px;
-  width: 100%;
-}
-.topTitle{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 20px 50px;
     width: 100%;
-}
-.title{
-    font-size: 21px;
-    font-weight: 700;
-    color: #000;
-    margin: 0 0 20px;
-    letter-spacing: 1.05px;
-    margin-bottom: 15px;
-}
-.titleText{
-    text-align: center;
-    width: 60%;
-    margin-bottom: 20px;
-    letter-spacing: .7px;
-    line-height: 17px;
-    font-weight: 400;
-}
-.categoryList{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 0px 2px;
-}
-.categoryItem{
-   width: calc(33% - 4px);
-   
-}
-/* .categoryImgItem{} */
-.categoryInfo{
-    margin-top: 12px;
-}
-.categoryText{
-    font-size: 16px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 5px;
-}
-.categoryPrices{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-}
-.categoryMarketPrice{
-    text-decoration:line-through;
-    font-size: 14px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-}
-.categoryPrice{
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 5px;
-    font-size: 16px;
-    margin-top: 3px;
-    margin-bottom: 40px;
-}
-
-
-@media only screen and (hover:none) and (pointer: coarse) {
-
-    .topTitle{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    .title{
-        font-size: 14px;
-    }
-    .titleText{
-        font-size: 14px;
-        text-align: center;
-        width: 60%;
-        margin-bottom: 20px;
-        letter-spacing: .7px;
-        line-height: 17px;
-        font-weight: 400; 
-    }
-    .titleText{
-        font-size: 12px;
-        width: 100%;
-        text-align: start;
-    }
-    .categoryList{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 0px 2px;
-    }
-    .categoryItem{
-    width: calc(48% - 4px);
-    }
-    .categoryText{
-        font-size: 14px;
-        text-align: start;
-        margin-left: 0;
-    }
-    .categoryPrices{
-        margin-left: 0px;
-    }
-    .categoryMarketPrice{
-        text-decoration:line-through;
-        font-size: 10px;
-        margin-top: 7px;
-        margin-bottom: 7px;
-    }
-    .categoryPrice{
-        font-weight: bold;
-        color: #000;
-        margin-bottom: 5px;
-        font-size: 12px;
-        margin-top: 3px;
-        margin-bottom: 40px;
-    }
-    
-
-} 
+  }
+  .topTitle{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+  }
+  .title{
+      font-size: 21px;
+      font-weight: 700;
+      color: #000;
+      margin: 0 0 20px;
+      letter-spacing: 1.05px;
+      margin-bottom: 15px;
+  }
+  .titleText{
+      text-align: center;
+      width: 60%;
+      margin-bottom: 20px;
+      letter-spacing: .7px;
+      line-height: 17px;
+      font-weight: 400;
+  }
+  .categoryList{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 0px 2px;
+  }
+  .categoryItem{
+     width: calc(33% - 4px);
+     
+  }
+  /* .categoryImgItem{} */
+  .categoryInfo{
+      margin-top: 12px;
+  }
+  .categoryText{
+      font-size: 16px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-left: 5px;
+      white-space: nowrap;
+  }
+  .categoryPrices{
+      display: flex;
+      flex-direction: column;
+      margin-left: 5px;
+  }
+  .categoryMarketPrice{
+      text-decoration:line-through;
+      font-size: 14px;
+      margin-top: 7px;
+      margin-bottom: 7px;
+  }
+  .categoryPrice{
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 5px;
+      font-size: 16px;
+      margin-top: 3px;
+      margin-bottom: 40px;
+  }
+  
+  @media only screen and (hover:none) and (pointer: coarse) {
+  
+      .topTitle{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+      }
+      .title{
+          font-size: 14px;
+      }
+      .titleText{
+          font-size: 14px;
+          text-align: center;
+          width: 60%;
+          margin-bottom: 20px;
+          letter-spacing: .7px;
+          line-height: 17px;
+          font-weight: 400; 
+      }
+      .titleText{
+          font-size: 12px;
+          width: 100%;
+          text-align: start;
+      }
+      .categoryContainer{
+       margin-top: 10px;
+      padding: 0px;
+      width: 100%; }
+      .categoryList{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 0px 15px;
+      }
+      .categoryItem{
+      width: calc(48% - 4px);
+      }
+      .categoryText{
+          font-size: 14px;
+          text-align: start;
+          margin-left: 0;
+      }
+      .categoryPrices{
+          margin-left: 0px;
+      }
+      .categoryMarketPrice{
+          text-decoration:line-through;
+          font-size: 10px;
+          margin-top: 7px;
+          margin-bottom: 7px;
+      }
+      .categoryPrice{
+          font-weight: bold;
+          color: #000;
+          margin-bottom: 5px;
+          font-size: 12px;
+          margin-top: 3px;
+          margin-bottom: 40px;
+      }
+  } 

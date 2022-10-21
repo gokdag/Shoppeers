@@ -5,6 +5,7 @@ import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detec
 import { Navigation, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
  
 
 
@@ -79,7 +80,9 @@ const Module004 = ({isMobile}) => {
             <div className={styles.bannerInfo}>
               <div className={styles.bannerText}>{x.text}</div>
             </div>
+            <Link href={ `category/${x.categoryId.toString()}`} >
             <button className={styles.btnShortText}>{x.shortText}</button>
+            </Link>
           </a>
         </SwiperSlide>
       ))}
