@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import styles from "../styles/categoryId.module.css"
+import styles from "../../styles/categoryId.module.css"
 
 
 
@@ -44,11 +44,11 @@ const CategoryId = ({lists}) => {
 
 
 export async function getServerSideProps(context) {
-  console.log(context.query)
+  //  console.log(context.query)
   const request = await fetch(`http://localhost:3000/api/category/${context.query.categoryId}`);
  
   const lists = await request.json();
-  console.log(Object.keys(lists))
+  // console.log(Object.keys(lists))
 
   if (!lists?.categoryInfo[0]) {
     return {

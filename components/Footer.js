@@ -65,7 +65,7 @@ const DATA = {
         items: [
           {
             text: "Hakkımızda",
-            url: "/about",
+            url: "/TabsMenu",
             data: [
               {
                 icon: false,
@@ -75,7 +75,7 @@ const DATA = {
           },
           {
             text: "İletişim",
-            url: "/contact",
+            url: "/TabsMenu",
             data: [
               {
                 icon: false,
@@ -85,7 +85,7 @@ const DATA = {
           },
           {
             text: "Müşteri Hizmetleri",
-            url: "/customerservice",
+            url: "/TabsMenu",
             data: [
               {
                 icon: false,
@@ -100,7 +100,7 @@ const DATA = {
         items: [
           {
             text: "Trençkot",
-            url: "/trenckot",
+            url: "/bannerCategoryId/12",
             data: [
               {
                 icon: false,
@@ -109,8 +109,8 @@ const DATA = {
             ],
           },
           {
-            text: "Kaban",
-            url: "/kaban",
+            text: "Etek",
+            url: "/bannerCategoryId/10",
             data: [
               {
                 icon: false,
@@ -119,8 +119,8 @@ const DATA = {
             ],
           },
           {
-            text: "Gömlek",
-            url: "/gömlek",
+            text: "Aksesuar",
+            url: "/bannerCategoryId/11",
             data: [
               {
                 icon: false,

@@ -356,7 +356,7 @@ const  Navbar =() => {
   const [activeNav, setActiveNav] = useState([]);
 
   function onMouseEventHandler(itemId) {
-    console.log("itemId", itemId)
+    // console.log("itemId", itemId)
     const items = DATA.NavItems.allItems.find((x) => x.id == itemId)?.items;
     if(items) {
       setActiveNav(items); 
@@ -445,10 +445,9 @@ const  Navbar =() => {
             </li>
           </ul>
         </div>
-        <div className={cn({ [styles.navbarSubItems] : true , [styles.navbarSubItemsZero]: activeNav.length == 0 })}>
+        <div onMouseLeave={() => setActiveNav([])} className={cn({ [styles.navbarSubItems] : true , [styles.navbarSubItemsZero]: activeNav.length == 0 })}>
           {
             activeNav.map((x, index) => { // activeNav olmadığı zaman class ata ve  navbarSubItems => (width padding margin 0 yap.)
-              console.log("activeNav", activeNav,activeNav.length  )
               return(
                 <div key={index} className={styles.gnDropdown}> 
                 {/* Ana Başlıkların Yer Aldığı Kısımdır. => Dış Giyim Üst Giyim Alt Giyim İç Giyim */}

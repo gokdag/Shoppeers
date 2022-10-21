@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../../styles/bannerCategoryId.module.css";
 import cn from "classnames";
 
 const BannerCategoryId = ({ bannerLists }) => {
-  console.log(bannerLists);
+  // console.log(bannerLists);
   const router = useRouter();
   const { bannerCategoryId } = router.query;
-  const [click, setClick] = useState(0);
+  const [click, setClick] = useState(3);
+  useEffect(function() {
+    setClick(3)
+  }, [])
   return (           
     <>  
       <div className={styles.bannerCategoryContainer}>

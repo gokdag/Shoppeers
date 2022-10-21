@@ -6,7 +6,7 @@ import { useGetProductQuery } from '../../redux/services/productApi'
 
 const Favorite = () => {
     const favoriteArea = useSelector((state) => state.favorite.data)
-    console.log("favoriteArea", favoriteArea)
+    // console.log("favoriteArea", favoriteArea)
 
     const { data, error, isLoading } = useGetProductQuery(favoriteArea)
     

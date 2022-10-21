@@ -1,0 +1,98 @@
+.TabsMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} 
+.TabsMenuWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    height: 655px;
+    width: 270px;
+    border-right: 1px solid #eaeaec;
+}
+.tabsTitle{
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 500;
+    color: #555;
+    padding: 20px 50px; 
+    transition: .3s ease-in-out;
+    border: none;
+    background-color: #fff;
+    white-space: nowrap;
+}
+.tabsTitle:hover{
+    margin-left: 10px;
+}
+.tabContent{} 
+.TabsMenu{}
+.tabContentWrapper{
+    padding: 70px;
+    margin-bottom: 60px;
+}
+.contentTitle{
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #555;
+}
+.contentText{
+    font-size: 18px;
+    color: #5d5d5d;
+    line-height: 1.6;
+}
+.tabsTitleClicked{
+    font-size: 19px;
+    color: #555;
+    font-weight: bold;
+    white-space: nowrap;
+    border-right:1px solid #555;
+}
+
+
+@media only screen and (hover:none) and (pointer: coarse) {
+
+    .TabsMenu{
+        display: flex;
+        flex-direction: column;
+    } 
+    .TabsMenuWrapper{
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       padding: 0 10px;
+       height: 50px;
+       border-right: 0;
+    }
+    .tabsTitle{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       font-size: 14px;
+       padding: 0;
+       margin-right: 0px;
+    }
+    .tabsTitle:hover{
+        margin-left: 0px;
+    }
+    .tabContentWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 30px;
+        margin-top: 20px;
+    }
+    .contentTitle{
+       font-size: 16px;
+    }
+    .contentText{
+        font-size: 14px;
+    }
+    .tabsTitleClicked{
+      border-right: 0;
+    }
+    
+
+} 

@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     useEffect(() => {
         if(window) {
             const { innerHeight: height } = window;
-            console.log("height" , height)
+            // console.log("height" , height)
             setHeight(height)
         }
     }, [])

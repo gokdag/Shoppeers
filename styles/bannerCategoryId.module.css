@@ -1,5 +1,5 @@
 .bannerCategoryContainer{
-    padding: 20px 50px;
+    padding: 20px 340px;
     width: 100%;
 }
 .view{
@@ -71,7 +71,7 @@
 }
 .sizes{
     position: absolute;
-    bottom: 0;
+    bottom: -25px;
     left: 50%;
     transform: translate(-50%, 100%);
     background-color: #f9f7f6e6;
@@ -82,6 +82,7 @@
     opacity: 0;
 }
 .sizesTitle{
+    font-size: 16px;
     padding-bottom: 15px;
     text-align: center;
     color: #515151;
@@ -94,6 +95,7 @@
     
 }
 .productSize{
+    font-size: 14px;
     color: #515151;
     padding: 10px;
     border: 1px solid #f9f7f6e6;
@@ -146,6 +148,10 @@
 
 
 @media only screen and (hover:none) and (pointer: coarse) {
+    .bannerCategoryContainer{
+        padding: 0;
+        width: 100%;
+    }
 
     .bannerTopTitle{
         display: flex;
@@ -178,10 +184,13 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    gap: 0px 5px;
+    gap: 0px 2px;
     }
-    .bannerCategoryItem{
-    width: calc(50% - 10px);
+    .bannerCategoryList.double .bannerCategoryItem{
+        width: calc(48% - 4px);
+    }
+    .bannerCategoryList.triple .bannerCategoryItem{
+        width: calc(33% - 2px);
     }
     .bannerCategoryText{
         font-size: 13px;
@@ -205,7 +214,23 @@
         margin-top: 3px;
         margin-bottom: 40px;
     }
+    .sizes{
+        display: none;
+    }
     .categoryImgItem:hover .sizes{
         visibility: hidden;
     }
+    .double{
+        cursor: pointer;
+        font-size: 16px; 
+        margin: 0;
+        padding: 5px 20px;
+    }
+    .triple{
+        font-size: 16px;
+        margin: 0;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    
 } 

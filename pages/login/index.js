@@ -18,7 +18,7 @@ const Login = () => {
                 password: Yup.string().required("Lütfen şifrenizi giriniz"),
             })}
             onSubmit={(values, { resetForm, setSubmitting }) => {
-                console.log(values);
+                // console.log(values);
                 setTimeout(() => {
                   resetForm();
                   setSubmitting(false);
