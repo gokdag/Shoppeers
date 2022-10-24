@@ -87,6 +87,7 @@ const Module001 = () => {
 
     const { data, error, isLoading } = useGetCategoryByIdQuery("hello")
     function addorRemoveFavorite(productId) {
+        console.log("productFavorite:",productId)
 
         const checkProductId = count.data.find(x => x == productId)
        
@@ -113,7 +114,7 @@ const Module001 = () => {
                     {DATA.moduleItems.items.map((x, index) => (
                         <SwiperSlide key={index} className={styles.swiperSlide}>
                             <div className={styles.modalSlider}>
-                                <button className={styles.favorite} onClick={() => addorRemoveFavorite(index)}>Favori
+                                <button className={styles.favorite} onClick={() => addorRemoveFavorite(x.productId)}>Favori
                                 </button>
                                 <img src={x.url}/>
                                 <div className={styles.sliderImgInfo}> {x.text}</div>

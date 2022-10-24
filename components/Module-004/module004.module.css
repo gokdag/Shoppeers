@@ -4,8 +4,8 @@
 }
 .bannerInfo{
     position: absolute;
-    top: 28%;
-    left: 41%;
+    top: 40%;
+    left: 42%;
 }
 .bannerText{
     font-size: 48px;
@@ -17,11 +17,11 @@
 }
 .btnShortText{
    position: absolute;
-   top: 85%;
+   top: 75%;
    left: 47%;
    border: 0;
    outline: 0;
-   padding: 10px;
+   padding: 11px;
    color: black;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    border-radius: 3px;
@@ -55,7 +55,7 @@
     .bannerInfo{
         position: absolute;
         top: 30%;
-        left: 38%;
+        left: 36%;
     }
     .bannerText{
         font-size: 20px;
