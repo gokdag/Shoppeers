@@ -1,27 +1,45 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { categoryApi } from "../../redux/services/categoryApi";
 import { useGetProductQuery } from "../../redux/services/productApi";
 import styles from "../../styles/favorite.module.css";
+import {removeFavorite} from '../../redux/favorite/favoriteSlice'
 
 const Favorite = () => {
+
   const favoriteArea = useSelector((state) => state.favorite.data);
   // console.log("favoriteArea", favoriteArea)
+  const count = useSelector((state) => state.favorite)
+  const dispatch = useDispatch()
+  
+  function addorRemoveFavorite(productId) {
+      console.log("productFavorite:",productId)
+
+      const checkProductId = count.data.find(x => x == productId)
+     
+      if (checkProductId || checkProductId == 0) {
+         
+          dispatch(removeFavorite(productId))
+          return
+      }
+     
+      dispatch(addFavorite(productId))
+  }
 
   const { data, error, isLoading } = useGetProductQuery(favoriteArea);
-  if (error) return <div>error</div>;
-  if (isLoading) return <div>loading</div>;
+  if (error) return <div>Bir hata oluştu</div>;
+  if (isLoading) return <div>Loading...</div>;
 
   console.log("data", data);
 
   return (
     <>
-      <div className={styles.favoriteContainer}> 
+      <div className={styles.favoriteContainer}>
       <div className={styles.favoriteList}>
         {data?.favoriteProducts.length > 0 &&
           data.favoriteProducts.map((x) => (
             <>
-            <a className={styles.favoriteItem}> 
+            <div className={styles.favoriteItem}> 
               <div className={styles.favoriteImgItem}>
                 <img src={x.url} />
               </div>
@@ -34,7 +52,8 @@ const Favorite = () => {
                 </span>
                 <span className={styles.favoritePrice}>{x.price}</span>
               </div>
-              </a>
+              <button className={styles.favoriteBtn} onClick={() => addorRemoveFavorite(x.productId)}>Favorilerden Sil</button>
+              </div>
             </>
           ))}
       </div>

@@ -5,12 +5,12 @@ export default function handler(req, res) {
     const productId = req.body.productId
     // console.log("productId", productId)
     // console.log("req.params ::: ",req.body)
-    let furkan = []
+    let basket = []
     productId.map((x) => {
-        let foundedProduct = mockData.items.find((y) => y.productId==x )
+        let basketProduct = mockData.items.find((y) => y.productId==x )
         // console.log("founded::::",foundedProduct)
-        if(foundedProduct) furkan.push(foundedProduct)
+        if(basketProduct) basket.push(basketProduct)
     })
    
-     res.json({favoriteProducts:furkan})
+     res.json({basketProducts:basket})
 }

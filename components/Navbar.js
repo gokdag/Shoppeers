@@ -441,7 +441,9 @@ const  Navbar =() => {
               </Link>
             </li>
             <li className={styles.navbarSocialItem}>
+              <Link href="/basket"> 
               <a className={styles.navbarSocialLink}>SEPETİM</a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -469,8 +471,6 @@ const  Navbar =() => {
             })
           }
         </div>
-
-
       </div>
     );
   }

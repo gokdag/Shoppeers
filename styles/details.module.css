@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.detailImage{}
+/* .detailImage{} */
 .image{
     width: 450px;
 }
@@ -39,12 +39,17 @@
     margin-bottom: 40px;
 }
 .addToBasket{
-    font-size:17px;
-    padding: 10px;
-    background-color: black;
+    border: 0;
+    background-color: #000;
+    padding: 10px 15px;
     color: #fff;
+    margin-bottom: 60px;
+    cursor: pointer;
     text-align: center;
-    margin-bottom: 40px;
+    transition: .3s ease-in-out;
+}
+.addToBasket:hover{
+    background-color: #4c4c4c;
 }
 .cargoInfo{
     color: #050505;

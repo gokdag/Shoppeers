@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styles from "./module002.module.css";
 
-
 const DATA = {
   moduleItems: {
     view: "center",
@@ -13,7 +12,7 @@ const DATA = {
         shortText: "Keşfet",
         marketPrice: "",
         price: "",
-        categoryId:1,
+        categoryId: 1,
       },
       {
         url: "https://www.suudcollection.com/Uploads/EditorUploads/Banner1/gomlek.png",
@@ -21,7 +20,7 @@ const DATA = {
         shortText: "Keşfet",
         marketPrice: "",
         price: "",
-        categoryId:2,
+        categoryId: 2,
       },
       {
         url: "https://www.suudcollection.com/Uploads/EditorUploads/Banner1/sweatshirt.png",
@@ -29,20 +28,19 @@ const DATA = {
         shortText: "Keşfet",
         marketPrice: "",
         price: "",
-        categoryId:3,
+        categoryId: 3,
       },
     ],
   },
 };
 
 const Module002 = () => {
- 
   return (
     <>
       <div className={styles.module002}>
         <div className={styles.module002List}>
           {DATA.moduleItems.items.map((x, index) => (
-            <Link href={ `category/${x.categoryId.toString()}`}  key={index}>
+            <Link href={`category/${x.categoryId.toString()}`} key={index}>
               <a className={styles.module002Item}>
                 <div className={styles.module002ImageBox}>
                   <img className={styles.module002Image} src={x.url} />
@@ -62,45 +60,5 @@ const Module002 = () => {
   );
 };
 
-
-
 export default Module002;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//getStaticProps ==> NextJS Page componentlarından export edilebilir.
-// //Yani gidip component içerisinde kullanamayız. Export edilemez.
-// //Çünkü render edebilmek için bütün verinin yakalanmış olması ve hazır olması gerekmektedir.
-// export async function getStaticProps() {
-//   const res = await fetch("http://localhost:3000/api/hello");
-//   const posts = await res.json();
-// return {
-//   props: { // will be passed to the page component as props // server side
-//     posts,
-//   },
-
-// }
-// }

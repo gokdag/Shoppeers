@@ -145,7 +145,19 @@
     margin-left: 10px;
     cursor: pointer;
 }
-
+.basketBtn{
+    border: 0;
+    background-color: #000;
+    padding: 10px 15px;
+    color: #fff;
+    margin-bottom: 60px;
+    cursor: pointer;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+.basketBtn:hover{
+    background-color: #4c4c4c;
+}
 
 @media only screen and (hover:none) and (pointer: coarse) {
     .bannerCategoryContainer{
