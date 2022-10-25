@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import bannerCategoryId from "../../pages/bannerCategoryId/[bannerCategoryId]";
 import styles from "./module003.module.css";
 
 const DATA = {
@@ -42,7 +41,7 @@ const Module003 = () => {
       <div className={styles.module003}>
         <div className={styles.module003List}>
           {DATA.bannerItems.items.map((x, index) => (
-            <Link href={`/bannerCategoryId/${x.categoryId}`} key={index}>
+            <Link href={`/category/${x.categoryId}`} key={index}>
               <a className={styles.module003Item}>
                   <img className={styles.module003Image} src={x.url} />
               </a>

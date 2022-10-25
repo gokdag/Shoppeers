@@ -272,17 +272,7 @@ const DATA = {
   },
 };
 
-const Footer = () => {
-
-  const [height, setHeight] = useState(false)
-
-    useEffect(() => {
-        if(window) {
-           setHeight(isMobile)
-        }
-    }, [])
-  
-
+const Footer = ({isMobile}) => {
 
   return (
     <>
@@ -300,9 +290,7 @@ const Footer = () => {
         </div>
         <div className={styles.bottomLogo}>ShopPeers</div>
         <div className={styles.bottomRightWrapper}>
-          {DATA.bottomRight.allItems.map((x, index) => (
-            <FooterItem key={index} title={x.title} items={x.items} />
-          ))}
+          <p>social media</p>
         </div>
       </div>
     </>
@@ -311,21 +299,19 @@ const Footer = () => {
 
 const FooterItem = ({ title, items }) => {
   return (
-    <div className={styles.container}>
-      <ul className={styles.list}>
+    <ul className={styles.container}>
+      <div className={styles.list}>
        {
-        title &&  <li className={styles.item}>
+        title &&  <div className={styles.item}>
         <span className={styles.title}>{title}</span>
-      </li>
+      </div>
        }
 
         {/* Başlık altındaki yazılar için */}
         {items.map((x, index) => (
           <li key={index} className={styles.bottomList}>
             {x.type ? (
-              <div className={styles.bottomItems}>
-                <Image className="image" src={x.url ? x.url : ""} width={ 80} height={20}></Image>
-              </div>
+                <Image className="image" src={x.url ? x.url : ""} width={ isMobile ? 132 : 80} height={isMobile ? 39 :20}></Image>
             ) : (
               <a href={x.url ? x.url : "#"} className={styles.link}>
                 {x.text}
@@ -333,8 +319,8 @@ const FooterItem = ({ title, items }) => {
             )}
           </li>
         ))}
-      </ul>
-    </div>
+      </div>
+    </ul>
   );
 };
 

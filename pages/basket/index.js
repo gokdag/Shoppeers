@@ -6,12 +6,9 @@ import { addBasket, removeBasket } from "../../redux/basket/basketSlice";
 
 const Basket = () => {
   const basketArea = useSelector((state) => state.basket.data);
-  console.log("basketArea", basketArea);
-  const count = useSelector((state) => state.basket);
   const dispatch = useDispatch();
 
-  function addorRemoveBasket(productId) {
-    console.log("productBasket:", productId);
+  function decreaseProduct(productId) {
     dispatch(removeBasket(productId));
   }
   return (
@@ -34,8 +31,13 @@ const Basket = () => {
                     </span>
                     <span className={styles.basketPrice}>{x.price}</span>
                   </div>
+
+                  <div className={styles.productAmount}>
+                    <div>{x.count} adet</div>
+                    <div>{x.totalPrice}</div>
+                  </div>
                   <button
-                    onClick={() => addorRemoveBasket(x.id)}
+                    onClick={() => decreaseProduct(x.id)}
                     className={styles.basketBtn}
                   >
                     Sepetten Sil

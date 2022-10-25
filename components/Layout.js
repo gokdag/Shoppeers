@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import { useEffect, useState } from "react";
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children,isMobile }) => {
 
     const [height, setHeight] = useState(0)
 
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <div style={{minHeight: "calc(100vh - 98px)"}}>{children}</div>
-      <Footer />
+      <Footer isMobile={isMobile} />
     </div>
   );
 };

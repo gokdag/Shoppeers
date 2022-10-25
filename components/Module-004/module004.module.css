@@ -27,6 +27,7 @@
    border-radius: 3px;
    cursor: pointer;
    transition: .3s ease-in-out;
+    background: #fff;
 }
 .btnShortText:hover{
     background-color: black;

@@ -45,6 +45,8 @@
 .bottomList{
     display: flex;
     list-style-type: none;
+    margin-right: 6px;
+    position:relative
 }
 .bottomItems{
     margin-right: 20px;
@@ -55,17 +57,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
-}
-
-.bottomContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #fff;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
 }
+
 .bottomLogo{
     text-align: center;
     font-size: 25px;
@@ -96,16 +93,15 @@
         font-size:12px;
     }
     .list{
-        margin-bottom: 10px;
     }
     .bottomContainer{
         border-bottom:none;
         margin-bottom: 0px;
+        flex-direction: column;
     }
     .bottomLogo{
         font-size: 12px;
-        margin-right: 10px;
-
+        padding:12px 0;
     }
     .bottomRightWrapper{
         display: flex;

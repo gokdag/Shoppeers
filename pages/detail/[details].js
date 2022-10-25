@@ -8,12 +8,8 @@ const Details = ({ detailList }) => {
   const count = useSelector((state) => state.basket);
   const dispatch = useDispatch()
 
-  function AddtoBasket(productId) {
-    console.log("productBasket:", productId);
-
- 
-    dispatch(addBasket(productId));
-    alert(addBasket())
+  function AddtoBasket(product) {
+    dispatch(addBasket(product));
   }
   // console.log("detailList : 55555");
   const router = useRouter();
