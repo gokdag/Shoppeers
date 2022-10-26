@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Navbar.module.css";
 import cn from "classnames";
+import axios from "axios";
 
 const DATA = {
   NavItems: {
@@ -355,6 +356,25 @@ const  Navbar =() => {
 
   const [activeNav, setActiveNav] = useState([]);
 
+  const [product, setProduct] = useState([])
+
+  useEffect(() => {
+        axios.get('http://localhost:3000/api/search?id=2')
+        // setProduct(res.data)
+        .then(function (response) {
+          // handle success
+          console.log(response);
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+        })
+        .finally(function () {
+          // always executed
+        });
+  },[])
+  console.log(product)
+
   function onMouseEventHandler(itemId) {
     // console.log("itemId", itemId)
     const items = DATA.NavItems.allItems.find((x) => x.id == itemId)?.items;
@@ -365,11 +385,6 @@ const  Navbar =() => {
 
     }
   }
-
-
-
-
-
     return (
       <div className={styles.generalContainer}>
          <Link href="/"> 
@@ -405,6 +420,7 @@ const  Navbar =() => {
                 openModal ? styles.activeModal : "",
               ].join(" ")}
             >
+              {/* search area */}
               <div className={styles.popup}>
                 <div className={styles.popupTitle}>ShopPeers</div>
                 <div className={styles.popupSearchArea}>

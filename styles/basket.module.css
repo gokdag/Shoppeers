@@ -9,10 +9,13 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    gap: 0px 2px;
+    gap: 0px 8px;
 }
 .basketItem{
-    width: calc(33% - 4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: calc(33% - 16px);
 }
 .basketInfo{
     margin-top: 12px;
@@ -40,7 +43,7 @@
     margin-bottom: 5px;
     font-size: 16px;
     margin-top: 3px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 .basketBtn{
     border: 0;
@@ -54,6 +57,48 @@
 }
 .basketBtn:hover{
     background-color: #4c4c4c;
+}
+.emptyBasket{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.emptyBasketTitle{
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+.emptyBasketInfo{
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #180A0A;
+}
+.emptyBasketButton{
+    letter-spacing: .2em;
+    font-size: 16px;
+    padding: 11px 20px;
+    line-height: 1.42;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    color: #fff;
+    background: #000;
+}
+/* .productAmount{} */
+.amount{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.totalPrice{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 30px;
 }
 
 @media only screen and (hover:none) and (pointer: coarse) {

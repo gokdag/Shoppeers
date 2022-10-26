@@ -2,9 +2,20 @@ import styles from "../../styles/details.module.css";
 import { useRouter } from "next/router"; // => adres çubuğundan gelen değişkenlere ulaşabileceğiz,
 import { useDispatch, useSelector } from "react-redux";
 import { addBasket, removeBasket } from "../../redux/basket/basketSlice";
-import { useEffect } from "react";
+
+// İmport React Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Details = ({ detailList }) => {
+
+  const showToastMessage = () => {
+    toast.success("Ürün Sepete Eklendi!", {
+      position: toast.POSITION.TOP_LEFT,
+      autoClose: 400,
+    });
+  };
+
   const count = useSelector((state) => state.basket);
   const dispatch = useDispatch()
 
@@ -26,7 +37,8 @@ const Details = ({ detailList }) => {
           <div className={styles.imagePrice}>{detailList.item.price}</div>
         </div>
           <div className={styles.sizes}>Seçiniz (S,M,L,XL)</div>
-          <button onClick={() => AddtoBasket({id:detailList.item.productId, url: detailList.item.url ,name:detailList.item.text, price:detailList.item.price})} className={styles.addToBasket}>Sepete Ekle</button>
+          <button onClick={() => {showToastMessage(); AddtoBasket({id:detailList.item.productId, url: detailList.item.url ,name:detailList.item.text, price:detailList.item.price});}} className={styles.addToBasket}>Sepete Ekle</button>
+          <ToastContainer />
           <div className={styles.cargoInfo}>Tahmini Kargoya Veriliş Tarihi : 14 Ekim - 19 Ekim </div>
         </div>
         

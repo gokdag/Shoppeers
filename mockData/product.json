@@ -636,9 +636,34 @@
       "titleText": "Suud Collection’ın renkli dünyasına Sweatshirt koleksiyonu ile rahat bir adım at. Günlük hayatta sıkça tercih edilen rahat modeller, farklı renk çeşitleri ile seni bekliyor. Dik yakalı, yarasa kollu, cepli, kolej tipi, kapüşonlu gibi birçok farklı kesim ve kumaştaki Suud Sweatshirt Koleksiyonu’nu hemen keşfet!"
     },
     {
+      "id": 4,
+      "title": "En Yeniler",
+      "titleText": ""
+    },
+    {
+      "id": 5,
+      "title": "Kaban",
+      "titleText": ""
+    },
+    {
+      "id": 7,
+      "title": "İndirimli Fiyatlar",
+      "titleText": ""
+    },
+    {
       "id": 10,
-      "title": "Sweatshirt",
-      "titleText": "Suud Collection’ın renkli dünyasına Sweatshirt koleksiyonu ile rahat bir adım at. Günlük hayatta sıkça tercih edilen rahat modeller, farklı renk çeşitleri ile seni bekliyor. Dik yakalı, yarasa kollu, cepli, kolej tipi, kapüşonlu gibi birçok farklı kesim ve kumaştaki Suud Sweatshirt Koleksiyonu’nu hemen keşfet!"
+      "title": "Etek",
+      "titleText": "ShopPeers’ın renkli dünyasına Etek koleksiyonu ile rahat bir adım at. Günlük hayatta sıkça tercih edilen rahat modeller, farklı renk çeşitleri ile seni bekliyor. Kazayağı Desenli , Leopar Desenli , Arkası Yırtmaçlı, Kalem tipi, düğmeli gibi birçok farklı kesim ve kumaştaki ShopPeers Etek Koleksiyonu’nu hemen keşfet!"
+    },
+    {
+      "id": 11,
+      "title": "Çanta",
+      "titleText": "ShopPeers’ın renkli dünyasına Çanta koleksiyonu ile rahat bir adım at. Günlük hayatta sıkça tercih edilen rahat modeller, farklı renk çeşitleri ile seni bekliyor. Çapraz Askılı, Kısa Saplı, Agotha, Süet tipi, Mauren gibi birçok farklı tarz ve kumaştaki ShopPeers Çanta Koleksiyonu’nu hemen keşfet!"
+    },
+    {
+      "id": 12,
+      "title": "Trençkot",
+      "titleText": "ShopPeers’ın renkli dünyasına Trençkot koleksiyonu ile rahat bir adım at. Günlük hayatta sıkça tercih edilen rahat modeller, farklı renk çeşitleri ile seni bekliyor. ShopPeers Trençkot Koleksiyonu’nu hemen keşfet!"
     }
   ]
 }

@@ -5,7 +5,19 @@ import { useGetProductQuery } from "../../redux/services/productApi";
 import styles from "../../styles/favorite.module.css";
 import {removeFavorite} from '../../redux/favorite/favoriteSlice'
 
+// İmport React Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Favorite = () => {
+
+  const deleteshowToastMessage = () => {
+    toast.error("Ürün favorilerden kaldırıldı!", {
+      position: toast.POSITION.TOP_LEFT,
+      autoClose: 600,
+      
+    });
+  };
 
   const favoriteArea = useSelector((state) => state.favorite.data);
   // console.log("favoriteArea", favoriteArea)
@@ -52,11 +64,12 @@ const Favorite = () => {
                 </span>
                 <span className={styles.favoritePrice}>{x.price}</span>
               </div>
-              <button className={styles.favoriteBtn} onClick={() => addorRemoveFavorite(x.productId)}>Favorilerden Sil</button>
+              <button className={styles.favoriteBtn} onClick={() => {addorRemoveFavorite(x.productId); deleteshowToastMessage();}}>Favorilerden Sil</button> 
               </div>
             </>
           ))}
       </div>
+      <ToastContainer />
       </div>
     </>
   );

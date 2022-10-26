@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import styles from "../../styles/TabsMenu.module.css";
 import cn from "classnames";
 import {useRouter} from "next/router";
-import Link from "next/link";
 
 const DATA = {
     tabItems: {
@@ -34,6 +33,7 @@ const TabsMenu = () => {
     const [tab, setTab] = useState([]);
     const {q} = router.query
     useEffect(() => {
+        // URL değişimi için.
         if (tab?.id) {
             router.push(`${router.pathname}?q=${tab.id}`, undefined, {
                 shallow: true,
@@ -48,10 +48,14 @@ const TabsMenu = () => {
 
     const clickedTab = (item) => {
         let foundedItem = DATA.tabItems.items.find((x) => x.id == item);
+        // console.log("foundedItem::",foundedItem)
 
+        // Click ettiğimiz kısım geliyor.
         if (clickedTab) {
             setTab(foundedItem);
+            console.log("setfoundedItem::",foundedItem)
         }
+        
     };
     return (
         <div className={styles.TabsMenu}>
@@ -59,7 +63,7 @@ const TabsMenu = () => {
                 {DATA.tabItems.items.map((x) => (
                     <button
                         onClick={() => {
-                            clickedTab(x.id);
+                            clickedTab(x.id)
                         }}
                         className={cn({
                             [styles.tabsTitle]: true,
@@ -76,9 +80,10 @@ const TabsMenu = () => {
 };
 
 const TabContent = ({data}) => {
-    if (!data.length) {
-        return <div style={{padding:"5px 12px"}}><Link href="/">Alıverişe devam et !</Link></div>;
-    }
+    // if (!data.length) {
+    //     console.log("data::::",data)
+    //     return 
+    // }
     return (
         <div className={styles.tabContent}>
             <div className={styles.tabContentWrapper}>
