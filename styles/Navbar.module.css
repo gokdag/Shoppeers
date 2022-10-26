@@ -114,7 +114,29 @@
     border-radius: 50%;
     background-color: #f5f5f5
 }
-
+.generalProduct{
+    width: 100%;
+}
+.listProduct{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+.itemProduct{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    padding: 0 10px;
+}
+.itemText{
+   font-size: 18px;
+   font-weight: 500;
+   margin: 10px 0 50px 0 ;
+   text-align: center;
+}
 .navbarSubItems{
     display: none;
     position: absolute;

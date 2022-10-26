@@ -63,7 +63,7 @@ const Basket = () => {
                   <div className={styles.emptyBasketTitle}>Sepet</div>
                   <div className={styles.emptyBasketInfo}>Sepetin şu anda boş.</div>
                   <Link href="/"> 
-                  <a className={styles.emptyBasketButton}>ALIŞVERİŞE DEVAM ET</a>
+                  <a className={styles.emptyBasketButton}>ALIŞVERİŞE DEVAM ET!</a>
                   </Link>
               </div>
             }

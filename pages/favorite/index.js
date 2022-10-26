@@ -8,6 +8,7 @@ import {removeFavorite} from '../../redux/favorite/favoriteSlice'
 // İmport React Toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 
 const Favorite = () => {
 
@@ -48,7 +49,7 @@ const Favorite = () => {
     <>
       <div className={styles.favoriteContainer}>
       <div className={styles.favoriteList}>
-        {data?.favoriteProducts.length > 0 &&
+        {data.favoriteProducts.length > 0 ?
           data.favoriteProducts.map((x) => (
             <>
             <div className={styles.favoriteItem}> 
@@ -67,7 +68,13 @@ const Favorite = () => {
               <button className={styles.favoriteBtn} onClick={() => {addorRemoveFavorite(x.productId); deleteshowToastMessage();}}>Favorilerden Sil</button> 
               </div>
             </>
-          ))}
+          )): <div className={styles.emptyFavorite}>
+                <div className={styles.emptyFavoriteTitle}>Favoriler</div>
+                <div className={styles.emptyFavoriteInfo}>Ne yazık ki hiç favorilere rastlamadık.</div>
+                <Link href="/"> 
+                <a className={styles.emptyFavoriteButton}>ALIŞVERİŞE DEVAM ET!</a>
+                </Link>
+           </div>}
       </div>
       <ToastContainer />
       </div>

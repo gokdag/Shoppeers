@@ -351,29 +351,29 @@ const DATA = {
   },
 };
 
-const  Navbar =() => {
+const  Navbar =({items}) => {
   const [openModal, setOpenModal] = useState(false);
 
   const [activeNav, setActiveNav] = useState([]);
 
-  const [product, setProduct] = useState([])
+  const [products, setProducts] = useState({items: []});
+
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
-        axios.get('http://localhost:3000/api/search?id=2')
-        // setProduct(res.data)
-        .then(function (response) {
-          // handle success
-          console.log(response);
-        })
-        .catch(function (error) {
-          // handle error
-          console.log(error);
-        })
-        .finally(function () {
-          // always executed
-        });
-  },[])
-  console.log(product)
+    fetch(`http://localhost:3000/api/search?keyword=${search}`)
+    .then(response => { 
+      return response.json()
+    })
+    .then(response =>{
+      // console.log({response})
+      setProducts(response)
+    })
+  }, [search])
+  // console.log("products :::",products)
+    
+
+    
 
   function onMouseEventHandler(itemId) {
     // console.log("itemId", itemId)
@@ -385,6 +385,7 @@ const  Navbar =() => {
 
     }
   }
+  
     return (
       <div className={styles.generalContainer}>
          <Link href="/"> 
@@ -425,11 +426,15 @@ const  Navbar =() => {
                 <div className={styles.popupTitle}>ShopPeers</div>
                 <div className={styles.popupSearchArea}>
                   <input
+                   onInput = {(e) => {setSearch(e.target.value)}}
                     className={styles.popupSearch}
                     type="text"
                     placeholder="Ne aramıştınız?"
+                    value = {search}
                   />
+                 
                 </div>
+
                 <div
                   onClick={() => {
                     setOpenModal(false);
@@ -439,6 +444,20 @@ const  Navbar =() => {
                   X
                 </div>
               </div>
+              <div className={styles.generalProduct}> 
+              {products.items.length > 0 ? (
+                  <ul className={styles.listProduct}>
+                    {products.items.map((x) =>{ 
+                      return (
+                        <div className={styles.itemProduct}> 
+                        <img src={x.url}/>
+                        <li className={styles.itemText}>{x.text}</li>
+                        </div>
+                      )}
+                    )}
+                  </ul>
+                ): ""}
+                </div>
             </div>
             {/* MODAL AREA END */}
             <li className={styles.navbarSocialItem}>
