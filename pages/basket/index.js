@@ -32,7 +32,7 @@ const Basket = () => {
               <>
                 <div className={styles.basketItem}>
                   <div className={styles.basketImgItem}>
-                    <img src={x.img} />
+                    <img src={ Array.isArray(x.img)? x.img[0] : x.img} />
                   </div>
                   <div className={styles.basketInfo}>
                     <span className={styles.basketText}>{x.name}</span>

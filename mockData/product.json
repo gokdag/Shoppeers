@@ -346,14 +346,50 @@
       "productId": 128
     },
     {
-      "url": "https://www.suudcollection.com/Uploads/UrunResimleri/thumb/aci-kahve-oversize-triko-kazak-4c9fc3.jpg",
+      "url": ["https://www.suudcollection.com/Uploads/UrunResimleri/thumb/aci-kahve-oversize-triko-kazak-4c9fc3.jpg","https://www.suudcollection.com/Uploads/UrunResimleri/thumb/aci-kahve-oversize-triko-kazak--13b1d.jpg"],
       "text": "Acı Kahve Oversize Kazak",
       "shortText": "",
       "marketPrice": "799,90",
       "price": "399,90",
       "currency": "TL",
       "categoryId": 4,
-      "productId": 129
+      "productId": 129,
+      "modelCode" : 1130,
+      "colors" : [
+        {          
+          "productId": 1129,
+            "name" : "Yeşil",
+            "colorCode" :"#008000"
+        },
+        {          
+          "productId": 129,
+            "name" : "Acı Kahve",
+            "colorCode" :"#472D2D"
+        }
+      ]
+    },
+    {
+      "url": ["https://www.suudcollection.com/Uploads/UrunResimleri/thumb/yesil-oversize-triko-kazak-c3-956.jpg","https://www.suudcollection.com/Uploads/UrunResimleri/thumb/yesil-oversize-triko-kazak-d06cb7.jpg"],
+      "text": "Yeşil Örme Oversize Kazak",
+      "shortText": "",
+      "marketPrice": "799,90",
+      "price": "399,90",
+      "currency": "TL",
+      "categoryId": 4,
+      "productId": 1129,
+      "modelCode" : 1130,
+      "colors" : [
+        {          
+          "productId": 1129,
+            "name" : "Yeşil",
+            "colorCode" :"#008000"
+        },
+        {          
+          "productId": 129,
+            "name" : "Acı Kahve",
+            "colorCode" :"#472D2D"
+        }
+      ]
     },
     {
       "url": "https://www.suudcollection.com/Uploads/UrunResimleri/thumb/kahverengi-deri-gomlek-e39-cb.jpg",

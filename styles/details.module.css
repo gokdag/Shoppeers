@@ -1,114 +1,108 @@
-.detailsContainer{
+.detailContainer{
     width: 100%;
-    padding: 20px 200px;
-}
-.detail{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    padding: 40px 70px;
 }
-/* .detailImage{} */
-.image{
-    width: 450px;
+.detailWrapper{
+    width: 100%;
 }
-.detailsWrapper{
+.detailImages{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: calc(50% - 2px);
+    padding: 50px 0 90px 90px;
 }
-.imageInfo{
+.detailInfo{
+    padding: 70px 90px;
+}
+.detailImgText{
+    font-size: 46px;
+    margin: 0 0 20px
+}
+.detailShortInfo{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-} 
-.imageText{
-    font-size:24px;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-bottom: 20px;
-}
-.imagePrice{
-    font-size:18px;
-    font-weight: 500;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-direction: row;
     margin-bottom: 40px;
 }
-.sizes{
-    font-size:16px;
-    font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-bottom: 40px;
+.infoFirst{
+    flex: 1 1;
+    color: #484747;
+    font-size: 17px;
+    margin-left: 5px;
+    text-align: left;
+    line-height: 25px;
 }
-.addToBasket{
+.infoSecond{
+    flex: 1 1;
+    color: #484747;
+    font-size: 17px;
+    margin-left: 5px;
+    text-align: left;
+    line-height: 25px;
+}
+.changeColor{
     border: 0;
-    background-color: #000;
-    padding: 10px 15px;
-    color: #fff;
-    margin-bottom: 60px;
+    width: 6%;
+    height: 3%;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
     cursor: pointer;
+}
+.detailImgPrice{
+    margin-bottom: 10px;
+    font-size: 22px;
+    justify-content: flex-start;
+}
+.detailBtn{
+    letter-spacing: .2em;
+    font-size: 16px;
+    display: inline-block;
+    padding: 11px 20px;
+    margin: 0;
+    line-height: 1.42;
     text-align: center;
-    transition: .3s ease-in-out;
+    cursor: pointer;
+    border-radius: 0;
+    color: #fff;
+    background: #000;
+    margin-top: 10px;
+    width: 100%;
 }
-.addToBasket:hover{
-    background-color: #4c4c4c;
-}
-.cargoInfo{
-    color: #050505;
-    font-weight: 300;
-}
-
-
 @media only screen and (hover:none) and (pointer: coarse) {
-    .detailsContainer{
+    .detailContainer{
+        flex-direction: column;
+    }
+    .detailImages{
+        display: flex;
+        flex-direction: row;
         width: 100%;
-        padding: 0;
+        padding: 0px;
+        overflow-x: scroll;
+        overflow-y: hidden;
     }
-    .detail{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .detailInfo{
+        padding: 50px 10px;
     }
-    .image{
-        width: 100%;
-        margin-bottom: 30px;
+    .detailImgText{
+        font-size: 30px;
     }
-    .detailsWrapper{
-        display: flex;
-        flex-direction: column;
+    .infoFirst{
+        font-size: 14px;
     }
-    .imageInfo{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; 
-    } 
-    .imageText{
-        font-size:22px;
-        font-weight: bold;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        margin-bottom: 20px;
+    .infoSecond{
+        font-size: 14px;
     }
-    .imagePrice{
-        font-size:20px;
-        font-weight: 500;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        margin-bottom: 40px;
+    .changeColor{
+        width: 20px;
+        height: 20px;
     }
-    .sizes{
-        font-size:16px;
-        font-weight: 400;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        margin-bottom: 40px;
+    .detailImgPrice{
+       text-align: center;
+       margin-bottom: 20px;
     }
-    .addToBasket{
-        font-size:17px;
-        padding: 10px;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 40px;
+    .detailBtn{
+        font-size: 14px;
     }
-    .cargoInfo{
-        color: #050505;
-        font-weight: 300;
-    }
-    
-} 
+}
