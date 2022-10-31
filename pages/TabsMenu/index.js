@@ -60,8 +60,8 @@ const TabsMenu = () => {
     return (
         <div className={styles.TabsMenu}>
             <div className={styles.TabsMenuWrapper}>
-                {DATA.tabItems.items.map((x) => (
-                    <button
+                {DATA.tabItems.items.map((x, index) => (
+                    <button key={index}
                         onClick={() => {
                             clickedTab(x.id)
                         }}

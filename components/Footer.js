@@ -29,8 +29,8 @@ const DATA = {
         title: "Kategoriler",
         items: [
           {
-            text: "Ayakkabı",
-            url: "/shoes",
+            text: "İndirimli Fiyatlar",
+            url: "/category/7",
             data: [
               {
                 icon: false,
@@ -39,8 +39,8 @@ const DATA = {
             ],
           },
           {
-            text: "Çanta",
-            url: "/bag",
+            text: "Kaban",
+            url: "/category/5",
             data: [
               {
                 icon: false,
@@ -49,8 +49,8 @@ const DATA = {
             ],
           },
           {
-            text: "Aksesuar",
-            url: "/accessory",
+            text: "En Yeniler",
+            url: "/category/4",
             data: [
               {
                 icon: false,
@@ -100,7 +100,7 @@ const DATA = {
         items: [
           {
             text: "Trençkot",
-            url: "/bannerCategoryId/12",
+            url: "/category/12",
             data: [
               {
                 icon: false,
@@ -110,7 +110,7 @@ const DATA = {
           },
           {
             text: "Etek",
-            url: "/bannerCategoryId/10",
+            url: "/category/10",
             data: [
               {
                 icon: false,
@@ -120,7 +120,7 @@ const DATA = {
           },
           {
             text: "Aksesuar",
-            url: "/bannerCategoryId/11",
+            url: "/category/11",
             data: [
               {
                 icon: false,

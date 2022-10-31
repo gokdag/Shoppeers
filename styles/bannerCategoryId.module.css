@@ -174,6 +174,7 @@
     }
     .bannerTitle{
         font-size: 14px;
+        margin-top: 15px;
     }
     .bannerTitleText{
         font-size: 10px;
@@ -197,6 +198,7 @@
     flex-wrap: wrap;
     width: 100%;
     gap: 0px 2px;
+    align-items: flex-start;
     }
     .bannerCategoryList.double .bannerCategoryItem{
         width: calc(48% - 4px);

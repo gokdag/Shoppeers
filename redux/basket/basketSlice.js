@@ -12,6 +12,7 @@ export const basketSlice = createSlice({
     initialState,
     reducers: {
         addBasket: (state, action) => {
+            console.log(action)
             let foundedItem = state.data.find((basketItem) => basketItem.id == action.payload.id)
             if (foundedItem) {
                 state.count+=1;
@@ -26,7 +27,7 @@ export const basketSlice = createSlice({
                 // sepette aynı id ye sahip item yok.
                 state.data.push({
                     id: action.payload.id,
-                    img: action.payload.url,
+                    url: Array.isArray(action.payload.url)? action.payload.url : [action.payload.url],
                     name: action.payload.name,
                     price: action.payload.price,
                     count: 1,
@@ -56,4 +57,7 @@ export const basketSlice = createSlice({
 
 export const {addBasket, removeBasket} = basketSlice.actions
 export default basketSlice.reducer;
+
+
+
 

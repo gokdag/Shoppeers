@@ -8,19 +8,17 @@ const DATA = {
   NavItems: {
     view: "space-between",
     allItems: [
-      {
-        title: "ÇOK SATANLAR",
-        id:3,
-        items: [
-         
-        ],
-      },
+      // {
+      //   title: "ÇOK SATANLAR",
+      //   id:3,
+      //   items: [
+
+      //   ],
+      // },
       {
         title: "EN YENİLER",
-        id:2,
-        items: [
-         
-        ],
+        id: 2,
+        items: [],
       },
       {
         title: "GİYİM",
@@ -253,274 +251,273 @@ const DATA = {
       },
       {
         title: "AKSESUAR",
-        id:4,
-        topId:3,
+        id: 4,
+        topId: 3,
         items: [
           {
             title: "Takı",
             id: 130,
             topId: 3, // id ile topId aynı olacak.
-            items : [
+            items: [
               {
                 title: "Kolye",
-                id: 131, 
+                id: 131,
                 topId: 130, // id ile topId aynı olacak.
                 items: [],
               },
               {
                 title: "Bileklik",
-                id: 132, 
+                id: 132,
                 topId: 130, // id ile topId aynı olacak.
                 items: [],
               },
               {
                 title: "Küpe",
-                id: 133, 
+                id: 133,
                 topId: 130, // id ile topId aynı olacak.
                 items: [],
               },
               {
                 title: "Yüzük",
-                id: 134, 
+                id: 134,
                 topId: 130, // id ile topId aynı olacak.
                 items: [],
               },
               {
                 title: "Halhal",
-                id: 135, 
+                id: 135,
                 topId: 130, // id ile topId aynı olacak.
                 items: [],
               },
-            ]
+            ],
           },
           {
             title: "Şapka",
             id: 140,
             topId: 4, // id ile topId aynı olacak.
-            items : [
+            items: [
               {
                 title: "Bere",
-                id: 141, 
+                id: 141,
                 topId: 140, // id ile topId aynı olacak.
                 items: [],
               },
               {
                 title: "Bucket Şapka",
-                id: 142, 
+                id: 142,
                 topId: 140, // id ile topId aynı olacak.
                 items: [],
               },
               {
                 title: "Yazlık Şapka",
-                id: 143, 
+                id: 143,
                 topId: 140, // id ile topId aynı olacak.
                 items: [],
               },
               {
                 title: "Kep",
-                id: 144, 
+                id: 144,
                 topId: 140, // id ile topId aynı olacak.
                 items: [],
               },
-            ]
+            ],
           },
         ],
       },
       {
         title: "ÇANTA",
-        id:5,
-        items: [
-         
-        ],
+        id: 5,
+        items: [],
       },
       {
         title: "AYAKKABI",
-        id:6,
-        items: [
-        
-        ],
+        id: 6,
+        items: [],
       },
-      {
-        title: "İNDİRİM",
-        id:7,
-        items: [
-         
-        ],
-      },
+      // {
+      //   title: "İNDİRİM",
+      //   id:7,
+      //   items: [
+
+      //   ],
+      // },
     ],
   },
 };
 
-const  Navbar =({items}) => {
+const Navbar = ({ items }) => {
   const [openModal, setOpenModal] = useState(false);
 
   const [activeNav, setActiveNav] = useState([]);
 
-  const [products, setProducts] = useState({items: []});
+  const [products, setProducts] = useState({ items: [] });
 
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch(`http://localhost:3000/api/search?keyword=${search}`)
-    .then(response => { 
-      return response.json()
-    })
-    .then(response =>{
-      // console.log({response})
-      setProducts(response)
-    })
-  }, [search])
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        // console.log({response})
+        setProducts(response);
+      });
+  }, [search]);
   // console.log("products :::",products)
-    
-
-    
 
   function onMouseEventHandler(itemId) {
     // console.log("itemId", itemId)
     const items = DATA.NavItems.allItems.find((x) => x.id == itemId)?.items;
-    if(items) {
-      setActiveNav(items); 
+    if (items) {
+      setActiveNav(items);
     } else {
-      setActiveNav([]); 
-
+      setActiveNav([]);
     }
   }
-  
-    return (
-      <div className={styles.generalContainer}>
-         <Link href="/"> 
+
+  return (
+    <div className={styles.generalContainer}>
+      <Link href="/">
         <div className={styles.navbarLogo}>ShopPeers</div>
-        </Link>
-        <div className={styles.wrapper}>
-          {DATA.NavItems.allItems.map((x, index) => (
-            <NavbarItem
-              mouseEvent = {onMouseEventHandler}
-              key={index}
-              id = {x.id}
-              title={x.title}
-              items={x.items}
-            />
-          ))}
-        </div>
-        <div className={styles.navbarSocial}>
-          <ul className={styles.navbarSocialList}>
-            <li className={styles.navbarSocialItem}>
-              <a
-                onClick={() => {
-                  setOpenModal(true);
-                }}
-                className={styles.navbarSocialLink}
-              >
-                ARA
-              </a>
-            </li>
-            {/* MODAL AREA */}
-            <div
-              className={[
-                styles.modal,
-                openModal ? styles.activeModal : "",
-              ].join(" ")}
-            >
-              {/* search area */}
-              <div className={styles.popup}>
-                <div className={styles.popupTitle}>ShopPeers</div>
-                <div className={styles.popupSearchArea}>
-                  <input
-                   onInput = {(e) => {setSearch(e.target.value)}}
-                    className={styles.popupSearch}
-                    type="text"
-                    placeholder="Ne aramıştınız?"
-                    value = {search}
-                  />
-                 
-                </div>
-
-                <div
-                  onClick={() => {
-                    setOpenModal(false);
-                  }}
-                  className={styles.cancel}
-                >
-                  X
-                </div>
-              </div>
-              <div className={styles.generalProduct}> 
-              {products.items.length > 0 ? (
-                  <ul className={styles.listProduct}>
-                    {products.items.map((x) =>{ 
-                      return (
-                        <div className={styles.itemProduct}> 
-                        <img src={x.url}/>
-                        <li className={styles.itemText}>{x.text}</li>
-                        </div>
-                      )}
-                    )}
-                  </ul>
-                ): ""}
-                </div>
-            </div>
-            {/* MODAL AREA END */}
-            <li className={styles.navbarSocialItem}>
-              <Link href="/signup">
-                <a className={styles.navbarSocialLink}>ÜYE OL</a>
-              </Link>
-            </li>
-            <li className={styles.navbarSocialItem}>
-              <Link href="/login">
-                <a className={styles.navbarSocialLink}>ÜYE GİRİŞİ</a>
-              </Link>
-            </li>
-            <li className={styles.navbarSocialItem}>
-              <Link href="/favorite">
-                <a className={styles.navbarSocialLink}>FAVORİLERİM</a>
-              </Link>
-            </li>
-            <li className={styles.navbarSocialItem}>
-              <Link href="/basket"> 
-              <a className={styles.navbarSocialLink}>SEPETİM</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div onMouseLeave={() => setActiveNav([])} className={cn({ [styles.navbarSubItems] : true , [styles.navbarSubItemsZero]: activeNav.length == 0 })}>
-          {
-            activeNav.map((x, index) => { // activeNav olmadığı zaman class ata ve  navbarSubItems => (width padding margin 0 yap.)
-              return(
-                <div key={index} className={styles.gnDropdown}> 
-                {/* Ana Başlıkların Yer Aldığı Kısımdır. => Dış Giyim Üst Giyim Alt Giyim İç Giyim */}
-                <div className={styles.dropdown}>{x.title}</div>
-                <div className={styles.dropdownSubMenu}>
-                  {
-                    x.items && x.items.map((y,index) => {
-                      return(
-                        <>
-                        {/* Ana Başlıkların altında çıkan kısımlardır => Kaban, Mont, Trençkot, Ceket */}
-                        <div key={index} className={styles.subMenu}>{y.title}</div>
-                        </>
-                      )
-                    })
-                  }
-                </div>
-                </div>
-              )
-            })
-          }
-        </div>
+      </Link>
+      <div className={styles.wrapper}>
+        {DATA.NavItems.allItems.map((x, index) => (
+          <NavbarItem
+            mouseEvent={onMouseEventHandler}
+            key={index}
+            id={x.id}
+            title={x.title}
+            items={x.items}
+          />
+        ))}
       </div>
-    );
-  }
+      <div className={styles.navbarSocial}>
+        <ul className={styles.navbarSocialList}>
+          <li className={styles.navbarSocialItem}>
+            <a
+              onClick={() => {
+                setOpenModal(true);
+              }}
+              className={styles.navbarSocialLink}
+            >
+              ARA
+            </a>
+          </li>
+          {/* MODAL AREA */}
+          <div
+            className={[styles.modal, openModal ? styles.activeModal : ""].join(
+              " "
+            )}
+          >
+            {/* search area */}
+            <div className={styles.popup}>
+              <div className={styles.popupTitle}>ShopPeers</div>
+              <div className={styles.popupSearchArea}>
+                <input
+                  onInput={(e) => {
+                    setSearch(e.target.value);
+                  }}
+                  className={styles.popupSearch}
+                  type="text"
+                  placeholder="Ne aramıştınız?"
+                  value={search}
+                />
+              </div>
 
+              <div
+                onClick={() => {
+                  setOpenModal(false);
+                }}
+                className={styles.cancel}
+              >
+                X
+              </div>
+            </div>
+            <div className={styles.generalProduct}>
+              {products.items.length > 0 ? (
+                <ul className={styles.listProduct}>
+                  {products.items.map((x, index) => {
+                    return (
+                      <div key={index} className={styles.itemProduct}>
+                        <img src={x.url} />
+                        <li className={styles.itemText}>{x.text}</li>
+                      </div>
+                    );
+                  })}
+                </ul>
+              ) : (
+                ""
+              )}
+            </div>
+          </div>
+          {/* MODAL AREA END */}
+          <li className={styles.navbarSocialItem}>
+            <Link href="/signup">
+              <a className={styles.navbarSocialLink}>ÜYE OL</a>
+            </Link>
+          </li>
+          <li className={styles.navbarSocialItem}>
+            <Link href="/login">
+              <a className={styles.navbarSocialLink}>ÜYE GİRİŞİ</a>
+            </Link>
+          </li>
+          <li className={styles.navbarSocialItem}>
+            <Link href="/favorite">
+              <a className={styles.navbarSocialLink}>FAVORİ</a>
+            </Link>
+          </li>
+          <li className={styles.navbarSocialItem}>
+            <Link href="/basket">
+              <a className={styles.navbarSocialLink}>SEPET</a>
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div
+        onMouseLeave={() => setActiveNav([])}
+        className={cn({
+          [styles.navbarSubItems]: true,
+          [styles.navbarSubItemsZero]: activeNav.length == 0,
+        })}
+      >
+        {activeNav.map((x, index) => {
+          // activeNav olmadığı zaman class ata ve  navbarSubItems => (width padding margin 0 yap.)
+          return (
+            <div key={index} className={styles.gnDropdown}>
+              {/* Ana Başlıkların Yer Aldığı Kısımdır. => Dış Giyim Üst Giyim Alt Giyim İç Giyim */}
+              <div className={styles.dropdown}>{x.title}</div>
+              <div className={styles.dropdownSubMenu}>
+                {x.items &&
+                  x.items.map((y, index) => {
+                    return (
+                      <>
+                        {/* Ana Başlıkların altında çıkan kısımlardır => Kaban, Mont, Trençkot, Ceket */}
+                        <div key={index} className={styles.subMenu}>
+                          {y.title}
+                        </div>
+                      </>
+                    );
+                  })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
-const NavbarItem = ({ title, items, mouseEvent, id  }) => {
+const NavbarItem = ({ title, items, mouseEvent, id }) => {
   return (
     <div className={styles.navbarContainer}>
       <ul className={styles.navbarList}>
-        <li className={styles.navbarItem} onMouseEnter = {() => mouseEvent(id)}>
-          <a className={styles.navbarLink} >{title}</a>
+        <li className={styles.navbarItem} onMouseEnter={() => mouseEvent(id)}>
+          <a className={styles.navbarLink}>{title}</a>
         </li>
       </ul>
     </div>
   );
 };
 
-export default Navbar
+export default Navbar;

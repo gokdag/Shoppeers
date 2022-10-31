@@ -5,7 +5,7 @@ import styles from "../../styles/bannerCategoryId.module.css";
 import cn from "classnames";
 
 const BannerCategoryId = ({ bannerLists }) => {
-  console.log(bannerLists);
+  // console.log("bannerLists::::", bannerLists);
   const [listView, setListView] = useState(3);
   useEffect(function () {
     setListView(3);
@@ -46,7 +46,6 @@ const BannerCategoryId = ({ bannerLists }) => {
                         <img className={styles.categoryImg} src={Array.isArray(x.url)? x.url[0] : x.url} />
                       </a>
                     </Link>
-                  
                 </div>
 
                 <div className={styles.sizes}>

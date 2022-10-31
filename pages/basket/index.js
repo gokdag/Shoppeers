@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useGetBasketQuery } from "../../redux/services/basketApi";
 import styles from "../../styles/basket.module.css";
@@ -10,6 +10,16 @@ import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 
 const Basket = () => {
+
+  const [viewedProducts, setViewedProducts] = useState([]);
+
+  useEffect(() => {
+    // console.log(JSON.parse(localStorage.getItem("viewedProducts")))
+    setViewedProducts(JSON.parse(localStorage.getItem("viewedProducts")) ?? [])
+  }, [])
+
+  // console.log({ viewedProducts });
+
   const deleteshowToastMessage = () => {
     toast.error("Ürün sepetten kaldırıldı!", {
       position: toast.POSITION.TOP_LEFT,
@@ -26,13 +36,12 @@ const Basket = () => {
     <>
       <div className={styles.basketContainer}>
         <div className={styles.basketList}>
-        
-          { basketArea?.length > 0 ?
+          {basketArea?.length > 0 ? (
             basketArea.map((x) => (
               <>
                 <div className={styles.basketItem}>
                   <div className={styles.basketImgItem}>
-                    <img src={ Array.isArray(x.img)? x.img[0] : x.img} />
+                    <img src={Array.isArray(x.url) ? x.url[0] : x.url} />
                   </div>
                   <div className={styles.basketInfo}>
                     <span className={styles.basketText}>{x.name}</span>
@@ -46,7 +55,9 @@ const Basket = () => {
 
                   <div className={styles.productAmount}>
                     <div className={styles.amount}>Ürün Adedi : {x.count}</div>
-                    <div className={styles.totalPrice}>Toplam : {x.totalPrice} TL</div>
+                    <div className={styles.totalPrice}>
+                      Toplam : {x.totalPrice} TL
+                    </div>
                   </div>
                   <button
                     onClick={() => {
@@ -59,16 +70,37 @@ const Basket = () => {
                   </button>
                 </div>
               </>
-            )) : <div className={styles.emptyBasket}>
-                  <div className={styles.emptyBasketTitle}>Sepet</div>
-                  <div className={styles.emptyBasketInfo}>Sepetin şu anda boş.</div>
-                  <Link href="/"> 
-                  <a className={styles.emptyBasketButton}>ALIŞVERİŞE DEVAM ET!</a>
-                  </Link>
-              </div>
-            }
+            ))
+          ) : (
+            <div className={styles.emptyBasket}>
+              <div className={styles.emptyBasketTitle}>Sepet</div>
+              <div className={styles.emptyBasketInfo}>Sepetin şu anda boş.</div>
+              <Link href="/">
+                <a className={styles.emptyBasketButton}>ALIŞVERİŞE DEVAM ET!</a>
+              </Link>
+            </div>
+          )}
         </div>
         <ToastContainer />
+        {/* Son Bakılan Ürünler  */}
+        {viewedProducts.length > 0 && (
+        <div className={styles.lastViewedTitleBox}>
+           <p className={styles.lastViewedTitle}>En son Baktığınız Ürünler..</p>
+        </div>
+        )}
+        <div className={styles.lastViewedContainer}>
+          {viewedProducts.map((lastViewed, index) => (
+            <div key={index} className={styles.lastViewedWrapper}>
+              <Link href={`/detail/${lastViewed.item.productId}`}> 
+              <a> 
+              <img className={styles.lastViewedImage} src={lastViewed.item.url[0]}/>
+              </a>
+              </Link>
+              <div className={styles.lastViewedText}>{lastViewed.item.text}</div>
+            </div>
+          ))}
+        </div>
+        {/* Son Bakılan Ürünler END */}
       </div>
     </>
   );
