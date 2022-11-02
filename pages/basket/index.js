@@ -26,7 +26,7 @@ const Basket = () => {
       autoClose: 600,
     });
   };
-  const basketArea = useSelector((state) => state.basket.data);
+  let basketArea = [...useSelector((state) => state.basket.data)];
   const dispatch = useDispatch();
 
   function decreaseProduct(productId) {
@@ -36,8 +36,8 @@ const Basket = () => {
     <>
       <div className={styles.basketContainer}>
         <div className={styles.basketList}>
-          {basketArea?.length > 0 ? (
-            basketArea.map((x) => (
+          {basketArea.length > 0 ? (
+            basketArea.sort((a, b) => a.count - b.count).map((x) => (
               <>
                 <div className={styles.basketItem}>
                   <div className={styles.basketImgItem}>

@@ -21,6 +21,9 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Import Icon 
+import {HeartOutlined} from '@ant-design/icons';
+
 const DATA = {
   moduleItems: {
     view: "center",
@@ -129,7 +132,7 @@ const Module001 = () => {
                   }}
                 >
                   {" "}
-                  Favori{" "}
+                  <HeartOutlined style={{fontSize : 20 , color: "black"}}/>{" "}
                 </button>
                 <img src={x.url} />
                 <div className={styles.sliderImgInfo}> {x.text}</div>

@@ -1,8 +1,15 @@
 import React from "react";
 import styles from "../styles/Footer.module.css";
 import Image from "next/image";
-import {isMobile} from 'react-device-detect';
+import { isMobile } from "react-device-detect";
 import { useEffect, useState } from "react";
+// Import Icon
+import {
+  TwitterOutlined,
+  InstagramOutlined,
+  YoutubeOutlined,
+} from "@ant-design/icons";
+import Link from "next/link";
 
 // view: Görünüm (top / center vb )
 // type : True ise fotoğraf yada icon gelecek.       title, items
@@ -272,8 +279,7 @@ const DATA = {
   },
 };
 
-const Footer = ({isMobile}) => {
-
+const Footer = ({ isMobile }) => {
   return (
     <>
       <div className={styles.wrapper}>
@@ -290,7 +296,17 @@ const Footer = ({isMobile}) => {
         </div>
         <div className={styles.bottomLogo}>ShopPeers</div>
         <div className={styles.bottomRightWrapper}>
-          <p>social media</p>
+          <Link href="/">
+            <a>
+              <InstagramOutlined
+                style={{ fontSize: 22, color: "black", marginRight: 10 }}
+              />{" "}
+              <YoutubeOutlined
+                style={{ fontSize: 22, color: "black", marginRight: 10 }}
+              />{" "}
+              <TwitterOutlined style={{ fontSize: 22, color: "black" }} />{" "}
+            </a>
+          </Link>
         </div>
       </div>
     </>
@@ -301,17 +317,22 @@ const FooterItem = ({ title, items }) => {
   return (
     <ul className={styles.container}>
       <div className={styles.list}>
-       {
-        title &&  <div className={styles.item}>
-        <span className={styles.title}>{title}</span>
-      </div>
-       }
+        {title && (
+          <div className={styles.item}>
+            <span className={styles.title}>{title}</span>
+          </div>
+        )}
 
         {/* Başlık altındaki yazılar için */}
         {items.map((x, index) => (
           <li key={index} className={styles.bottomList}>
             {x.type ? (
-                <Image className="image" src={x.url ? x.url : ""} width={ isMobile ? 132 : 80} height={isMobile ? 39 :20}></Image>
+              <Image
+                className="image"
+                src={x.url ? x.url : ""}
+                width={isMobile ? 132 : 80}
+                height={isMobile ? 39 : 20}
+              ></Image>
             ) : (
               <a href={x.url ? x.url : "#"} className={styles.link}>
                 {x.text}

@@ -158,6 +158,23 @@
 .basketBtn:hover{
     background-color: #4c4c4c;
 }
+.favorite {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: -1px 4px 6px -6px #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 12;
+    cursor: pointer;
+    border: none;
+}
 
 @media only screen and (hover:none) and (pointer: coarse) {
     .bannerCategoryContainer{
