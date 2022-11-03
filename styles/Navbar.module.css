@@ -307,12 +307,28 @@
         width: 176px;
     }
     .navMobilItem{
-        margin-bottom: 40px;
+        margin: 20px 0;
         font-size: 18px;
         font-weight: bold;
         font-style: italic;
+        position: relative;
     }
+     .navMobilItemArrow::before{
+         content: ">";
+         position: absolute;
+         right: -17px;
+         top: -2px;
+     }
     .navbarMobil{
         display: block;
     }
+    .backDivider{display: flex;
+        position: absolute;
+        top: 45px;
+        padding: 15px;
+        left: 35px;
+        font-weight: 600;
+    }
+    .backIcon{padding-right: 5px}
+    .throwText{}
 } 
