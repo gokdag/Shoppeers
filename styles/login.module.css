@@ -1,26 +1,30 @@
-.loginContainer{
+.loginContainer {
     padding: 0 30px;
     padding-top: 215px;
     padding-bottom: 16px;
 }
-.signIn{
-    
+
+.signIn {
+
     display: flex;
     justify-content: space-between;
     margin: 0 10%;
-}
-.loginForm{
     max-width: 450px;
-    width: 100%;
 }
-.loginTitle{
+
+.loginForm {
+
+}
+
+.loginTitle {
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 30px;
     text-align: start;
     text-transform: uppercase;
 }
-.loginInputs{
+
+.loginInputs {
     outline: 0;
     border: 0;
     border-bottom: 1px solid #6c6c6c;
@@ -35,12 +39,13 @@
     background-color: #fff;
     margin-bottom: 20px;
 }
-.loginBtn{
+
+.loginBtn {
     margin-top: 30px;
     width: 100%;
     font-size: 16px;
     font-weight: 500;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #fff;
     height: auto;
     padding: 12px 20px;
@@ -51,11 +56,13 @@
     cursor: pointer;
     border-radius: 5px;
 }
-.loginErrors{
+
+.loginErrors {
     color: red;
-    margin: 0px 0 2px 0 ;
+    margin: 0px 0 2px 0;
 }
-.loginCancel{
+
+.loginCancel {
     cursor: pointer;
     font-size: 26px;
     font-weight: bold;
@@ -63,31 +70,37 @@
 }
 
 
-@media only screen and (hover:none) and (pointer: coarse){
-    .loginContainer{
+@media only screen and (hover: none) and (pointer: coarse) {
+    .loginContainer {
         padding-top: 200px;
         padding-bottom: 0px;
     }
-    .signIn{
+
+    .signIn {
         margin: 0 5%;
     }
-    .loginForm{
+
+    .loginForm {
         max-width: 450px;
         width: 100%;
     }
-    .loginTitle{
+
+    .loginTitle {
         font-size: 22px;
     }
-    .loginInputs{
+
+    .loginInputs {
         margin-bottom: 20px;
     }
-     .loginErrors{
-        margin: 0px 0 2px 0 ;
-    } 
-    .loginCancel{
+
+    .loginErrors {
+        margin: 0px 0 2px 0;
+    }
+
+    .loginCancel {
         font-size: 20px;
         height: 20px;
     }
-    
-    
+
+
 } 
