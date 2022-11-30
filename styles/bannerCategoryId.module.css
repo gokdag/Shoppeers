@@ -80,19 +80,13 @@
     transition: .4s ease-in-out;
     overflow: hidden;
     opacity: 0;
-    text-align: center;
 }
 .sizesTitle{
-    font-size: 15px;
+    font-size: 16px;
+    padding-bottom: 15px;
     text-align: center;
-    background-color: #efefef;
-    border: 1px solid#c5c5c5;
-    padding: 4px 12px;
-    border-radius: 3px;
-    color: #464646;
-    margin:3px 0
+    color: #515151;
 }
-.sizesTitle:hover{background-color:#dddcdc }
 .sizesItems{
     display: flex;
     flex-direction: row;
